@@ -18,58 +18,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-jI-Ec6">
-                                <rect key="frame" x="81" y="360" width="107" height="66"/>
+                                <rect key="frame" x="60" y="72" width="255" height="135"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.72941176470588232" green="1" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="470220568.14411998">
                                     <!--2015-11-26 08:49:28 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzk-Yo-tgT">
+                                <rect key="frame" x="217" y="229" width="124" height="34"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.85372669279920488" blue="0.59756431736438298" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="选择日期"/>
+                                <connections>
+                                    <action selector="showDatePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DN-Xs-aaa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择的时间范围是:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-t6-8jV">
+                                <rect key="frame" x="20" y="290" width="335" height="28"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.82745098039215681" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="日期选择器" id="b0Y-63-1FJ">
-                        <barButtonItem key="rightBarButtonItem" title="自定义" id="eYR-VH-erW">
-                            <connections>
-                                <segue destination="aGD-7C-02r" kind="push" id="m5a-d9-cjl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="自定义" id="eYR-VH-erW"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeScopeLabel" destination="Jvg-t6-8jV" id="NbW-Wk-kLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1253.5" y="429.5"/>
-        </scene>
-        <!--自定义日期选择器-->
-        <scene sceneID="urN-si-oeR">
-            <objects>
-                <viewController id="aGD-7C-02r" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1Id-dY-ALZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="yCe-n5-wTD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x3M-ib-KSX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="点击选择日期范围" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-Qp-fjp">
-                                <rect key="frame" x="20" y="72" width="335" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="自定义日期选择器" id="m66-wC-AdQ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MD1-b5-q6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1791.5" y="429.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kic-QF-KOd">
